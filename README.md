@@ -30,4 +30,5 @@ jobs:
 ```
 
 `S3_PATH` is the full name of the s3 bucket + folder path that you want to write the docs to. ex: `s3://my-bucket/mkdocs-docs-folder`
+
 The AWS key env vars should have read/write permission to this bucket.
