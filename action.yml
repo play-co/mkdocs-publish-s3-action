@@ -1,0 +1,10 @@
+# action.yml
+name: 'Deploy MkDocs site to S3'
+description: 'Deploys MkDocs site to S3'
+author: 'Jake Davies'
+branding:
+  icon: 'arrow-up-circle'  
+  color: 'orange'
+runs:
+  using: 'docker'
+  image: 'action/dockerfile'
