@@ -2,6 +2,6 @@
 set -e
 
 mkdocs build --config-file "${GITHUB_WORKSPACE}/mkdocs.yml" 
-ls "${GITHUB_WORKSPACE}/docsite/static"
+aws s3 cp --recursive "${GITHUB_WORKSPACE}/docsite/static" $S3_PATH
 
 
