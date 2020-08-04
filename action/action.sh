@@ -7,8 +7,6 @@ fi
 
 mkdocs build --config-file "${GITHUB_WORKSPACE}/mkdocs.yml" 
 
-
-
-aws s3 cp --recursive "${GITHUB_WORKSPACE}/docsite/static" $S3_PATH
+aws s3 cp --recursive "${GITHUB_WORKSPACE}/docsite/static" "s3://playco-docs/${PROJECT_NAME}"
 
 
