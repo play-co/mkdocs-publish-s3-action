@@ -3,7 +3,7 @@ set -e
 
 mkdocs build --config-file "${GITHUB_WORKSPACE}/mkdocs.yml" 
 
-if [ "${TYPEDOC}" = "true" ]; then
+if [ "${typedoc}" = "true" ]; then
   typedoc "${GITHUB_WORKSPACE}/src" --out "${GITHUB_WORKSPACE}/docsite/static/generated"
 fi
 
