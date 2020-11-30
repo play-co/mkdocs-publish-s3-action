@@ -2,7 +2,8 @@
 set -e
 
 if [ "${TYPEDOC}" = "true" ]; then
-  typedoc "${GITHUB_WORKSPACE}/src" --out "${GITHUB_WORKSPACE}/docs/generated"
+  npm install typedoc
+  npx typedoc "${GITHUB_WORKSPACE}/src" --out "${GITHUB_WORKSPACE}/docs/generated"
 fi
 
 if [ "${CHANGELOG}" = "true" ]; then

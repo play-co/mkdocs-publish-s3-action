@@ -10,7 +10,7 @@ RUN echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repo
 RUN pip install awscli
 
 RUN apk add --no-cache bash nodejs npm && chmod +x /action.sh
-RUN npm install -g github-release-notes typescript typedoc
+RUN npm install -g github-release-notes
 
 
 ENTRYPOINT ["/action.sh"]
