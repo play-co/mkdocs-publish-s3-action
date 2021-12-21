@@ -7,7 +7,7 @@ WORKDIR /docs
 
 RUN echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 
-RUN pip install awscli
+RUN pip install -U awscli mkdocs-material
 
 RUN apk add --no-cache bash nodejs npm && chmod +x /action.sh
 RUN npm install -g github-release-notes
